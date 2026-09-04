@@ -1,0 +1,106 @@
+/* ===== Reset ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fafafa;
+  color: #222;
+}
+
+/* ===== Header ===== */
+.page-header {
+  background-color: #7a1f2b;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.page-header h1 {
+  font-size: 3rem;      /* different font sizes across headings */
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+/* ===== Nav ===== */
+.main-nav {
+  background-color: #4a1015;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover { color: #f2c14e; }
+
+/* ===== Sections (full width, spacing via padding/margin/border) ===== */
+.section {
+  width: 100%;
+  padding: 100px 10%;
+  border-bottom: 4px solid #ffffff33;
+  margin: 0;
+}
+
+.section-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.85);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.section h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 15px; }
+.section h3 { font-size: 1.8rem; font-weight: 600; margin-bottom: 15px; }
+.section h4 { font-size: 1.6rem; font-weight: 500; margin-bottom: 15px; }
+.section h5 { font-size: 1.4rem; font-weight: 400; margin-bottom: 15px; }
+
+.section p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* ===== Parallax-style fixed backgrounds ===== */
+.parallax-1 {
+  background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* parallax effect */
+}
+
+.parallax-2 {
+  background-image: url('https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=1200');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* parallax effect */
+}
+
+/* ===== Gradient sections ===== */
+.gradient-linear {
+  background: linear-gradient(135deg, #ff9966, #ff5e62 60%, #7a1f2b);
+  color: #fff;
+}
+
+.gradient-radial {
+  background: radial-gradient(circle at center, #f2c14e, #7a1f2b 70%);
+  color: #fff;
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  background-color: #2a0a0d;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}

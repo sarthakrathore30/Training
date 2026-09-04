@@ -1,0 +1,65 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fdfdfb;
+  color: #2b2b2b;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 50px 20px 80px;
+}
+
+.article-header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 0.95rem;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+/* ===== Paragraph spacing ===== */
+.article-body p {
+  margin-bottom: 24px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* ===== First letter styling (drop cap) ===== */
+.article-body p::first-letter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #b5432b;
+  float: left;
+  line-height: 1;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+/* ===== First line bold ===== */
+.article-body p::first-line {
+  font-weight: bold;
+}
+
+/* ===== Highlighted keywords ===== */
+mark {
+  background-color: #ffe08a;
+  color: #333;
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
+/* ===== Blockquote emphasis ===== */
+blockquote {
+  border-left: 5px solid #b5432b;
+  background-color: #f6efe9;
+  padding: 15px 20px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #444;
+}

@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   HEADER — sticky positioning
+   ========================================================= */
+.site-header {
+  position: sticky;   /* sticky positioning */
+  top: 0;
+  z-index: 200;
+  background-color: rgba(17, 24, 39, 0.95); /* rgba color */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 6%;
+  border-bottom: 2px solid #f2a900;
+  outline: none; /* outline property present, kept invisible by default */
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.site-header nav a:hover {
+  color: #f2a900;
+}
+
+/* =========================================================
+   HERO — relative positioning + centered absolute text
+   ========================================================= */
+.hero {
+  position: relative;   /* relative positioning */
+  height: 80vh;
+  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                     url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1400');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  position: absolute;   /* absolute positioning, centered within relative parent */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* =========================================================
+   ABOUT — two column flex layout
+   ========================================================= */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 8%;
+  background-color: #fdfdfb;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: #111827;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  border: 6px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================================================
+   SERVICES — three boxes, grid layout
+   ========================================================= */
+.services {
+  padding: 80px 8%;
+  background-color: #f3f4f6;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* flexbox/grid responsive alignment */
+  gap: 30px;
+}
+
+.service-box {
+  background-color: #ffffff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+}
+
+.service-box h3 {
+  margin-bottom: 12px;
+  color: #f2a900;
+}
+
+/* =========================================================
+   CONTACT — simple centered form
+   ========================================================= */
+.contact {
+  padding: 80px 8%;
+  background-color: #111827;
+  color: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background-color: #1f2937;
+  color: #fff;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #f2a900; /* outline property used meaningfully here */
+  border-color: #f2a900;
+}
+
+.contact-form button {
+  padding: 13px;
+  background-color: #f2a900;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #d99400;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  background-color: #0b0f17;
+  color: #9ca3af;
+  text-align: center;
+  padding: 22px;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 800px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+}

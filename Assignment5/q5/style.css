@@ -1,0 +1,130 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  padding: 60px 20px;
+}
+
+.page-title {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 50px;
+}
+
+/* ===== Grid: three equal columns ===== */
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch; /* equal height boxes */
+}
+
+.plan {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 40px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps button at bottom regardless of content length */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+
+  /* Smooth hover animation */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  background-color: #f0f9ff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.plan h2 {
+  font-size: 1.4rem;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 25px;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 30px;
+  flex-grow: 1; /* pushes button down evenly */
+}
+
+.features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eef2f7;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #1f2937;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #374151;
+}
+
+/* ===== Highlight most popular plan ===== */
+.popular {
+  border: 3px solid #f2a900;
+  transform: scale(1.03);
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f2a900;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.btn-popular {
+  background-color: #f2a900;
+}
+
+.btn-popular:hover {
+  background-color: #d99400;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 800px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
+  }
+
+  .popular {
+    transform: none;
+  }
+}
