@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Flexbox lays out nav links horizontally by default */
+.navbar {
+  display: flex;
+  background-color: #1e293b;
+  padding: 0.5rem 1rem;
+}
+
+.navbar a {
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease; /* smooth hover transition on color, background, border */
+}
+
+.navbar a:hover {
+  background-color: #334155;
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+/* Active link highlighted with distinct background and underline */
+.navbar a.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-bottom: 3px solid #93c5fd;
+}
+
+.page-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.page-content h1 {
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #1e293b;
+  color: #d1d5db;
+}
+
+/* Below 700px, the navbar stacks vertically */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .navbar a.active {
+    border-bottom: none;
+    border-left: 4px solid #93c5fd;
+  }
+}

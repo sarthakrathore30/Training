@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+form {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); /* subtle shadow for a neat card */
+}
+
+/* Uniform spacing between each field */
+.field {
+  margin-bottom: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: 2px solid transparent; /* reserve space so layout doesn't shift on focus */
+  outline-offset: 2px;
+  transition: outline-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom outline style shown while not focused, for demonstration */
+input {
+  outline-style: dashed;
+}
+
+textarea {
+  outline-style: dotted;
+  resize: vertical;
+}
+
+/* On focus, outline becomes a solid, colored ring offset from the border */
+input:focus,
+textarea:focus {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+  border-color: #2563eb;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline-offset: 3px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:focus {
+  outline: 3px solid #93c5fd;
+}

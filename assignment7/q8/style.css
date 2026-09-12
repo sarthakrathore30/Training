@@ -1,0 +1,97 @@
+/* Note: no universal box-sizing reset here on purpose,
+   so we can compare content-box vs border-box directly */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* Flexbox centers the two demos on the page */
+.model-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+}
+
+.box-model-demo {
+  text-align: center;
+}
+
+.box-model-demo h2 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Margin layer: outlined so the margin area is visible */
+.margin-layer {
+  outline: 2px dashed #f97316;
+  background-color: #fff7ed;
+  padding: 20px;
+  font-size: 0.75rem;
+  color: #c2410c;
+}
+
+/* Border layer: default content-box border */
+.border-layer {
+  border: 8px solid #2563eb;
+  background-color: #dbeafe;
+  font-size: 0.75rem;
+  color: #1e3a8a;
+  width: 220px;
+}
+
+/* Same border thickness, but box-sizing: border-box keeps width fixed */
+.border-box-border {
+  box-sizing: border-box;
+  background-color: #dcfce7;
+  border-color: #16a34a;
+  color: #14532d;
+}
+
+/* Padding layer */
+.padding-layer {
+  background-color: #fef9c3;
+  padding: 20px;
+  color: #713f12;
+  font-size: 0.75rem;
+}
+
+/* Content layer: the actual content box */
+.content-layer {
+  background-color: #ffffff;
+  border: 1px solid #94a3b8;
+  padding: 20px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.explanation {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+  line-height: 1.7;
+  color: #475569;
+  text-align: center;
+}
+
+.explanation code {
+  background-color: #e2e8f0;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+}

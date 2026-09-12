@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* Flexbox arranges the four boxes horizontally */
+.transform-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+.transform-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.transform-box {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.4s ease; /* smooth transition for all transform changes */
+}
+
+.label {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.rotate-box {
+  background-color: #2563eb;
+}
+.rotate-box:hover {
+  transform: rotate(45deg);
+}
+
+.scale-box {
+  background-color: #16a34a;
+}
+.scale-box:hover {
+  transform: scale(1.3);
+}
+
+.translate-box {
+  background-color: #f97316;
+}
+.translate-box:hover {
+  transform: translateY(-15px);
+}
+
+.skew-box {
+  background-color: #9333ea;
+}
+.skew-box:hover {
+  transform: skew(15deg);
+}

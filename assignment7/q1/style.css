@@ -1,0 +1,100 @@
+/* Reset default spacing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* Flexbox row to align all boxes horizontally, wrapping on smaller screens */
+.box-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+}
+
+/* Base box styling shared by all demo boxes */
+.demo-box {
+  width: 180px;
+  min-height: 120px;
+  background-color: #ffffff;
+  text-align: center;
+  transition: border-color 0.4s ease; /* smooth hover transition on border color */
+}
+
+.demo-box h2 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.demo-box p {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Border style examples */
+.solid-box {
+  border: 3px solid #2563eb;
+  padding: 1rem; /* standard padding */
+}
+.solid-box:hover {
+  border-color: #f97316;
+}
+
+.dashed-box {
+  border: 3px dashed #16a34a;
+  padding: 0.5rem; /* smaller padding */
+}
+.dashed-box:hover {
+  border-color: #f97316;
+}
+
+.double-box {
+  border: 6px double #9333ea;
+  padding: 1rem;
+}
+.double-box:hover {
+  border-color: #f97316;
+}
+
+.groove-box {
+  border: 6px groove #ca8a04;
+  padding: 1.2rem;
+}
+.groove-box:hover {
+  border-color: #f97316;
+}
+
+/* Rounded corners example */
+.rounded-box {
+  border: 3px solid #0891b2;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.rounded-box:hover {
+  border-color: #f97316;
+}
+
+/* Large padding example for spacing comparison */
+.padded-box {
+  border: 3px solid #db2777;
+  padding: 2.5rem;
+}
+.padded-box:hover {
+  border-color: #f97316;
+}

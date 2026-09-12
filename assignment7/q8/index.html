@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Model Exploration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Box Model Exploration</h1>
+  </header>
+
+  <main class="model-wrapper">
+    <div class="box-model-demo default-model">
+      <h2>Default box-sizing: content-box</h2>
+      <div class="margin-layer">
+        Margin
+        <div class="border-layer">
+          Border
+          <div class="padding-layer">
+            Padding
+            <div class="content-layer">Content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-model-demo border-box-model">
+      <h2>box-sizing: border-box</h2>
+      <div class="margin-layer">
+        Margin
+        <div class="border-layer border-box-border">
+          Border
+          <div class="padding-layer">
+            Padding
+            <div class="content-layer">Content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <p class="explanation">
+    With <code>content-box</code> (the default), width and height apply
+    only to the content area, so padding and border are added on top,
+    making the element visually larger. With <code>border-box</code>,
+    padding and border are included inside the specified width and
+    height, keeping the overall box size predictable.
+  </p>
+
+  <footer>
+    <p>&copy; 2026 Box Model Exploration</p>
+  </footer>
+</body>
+</html>

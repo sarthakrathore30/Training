@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.selector-demo {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.selector-demo h2 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+/* ATTRIBUTE SELECTORS */
+/* Targets any input with type="text" specifically */
+input[type="text"] {
+  padding: 0.6rem;
+  border: 2px solid #94a3b8;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Targets any focused text input */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Targets links whose href starts with https (secure links) */
+a[href^="https"] {
+  color: #16a34a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a[href^="https"]:hover {
+  text-decoration: underline;
+}
+
+/* PSEUDO-CLASSES */
+/* :nth-child(even) styles every other list item */
+.fruit-list li:nth-child(even) {
+  background-color: #dbeafe;
+}
+
+.fruit-list li {
+  list-style: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 0.3rem;
+}
+
+/* :hover changes background on mouse-over */
+.fruit-list li:hover {
+  background-color: #93c5fd;
+  cursor: pointer;
+}
+
+/* PSEUDO-ELEMENTS */
+/* ::before inserts content before the paragraph text */
+.quote::before {
+  content: "\201C"; /* opening quote mark */
+  font-size: 1.4rem;
+  color: #2563eb;
+  margin-right: 0.2rem;
+}
+
+/* ::after inserts content after the paragraph text */
+.quote::after {
+  content: "\201D"; /* closing quote mark */
+  font-size: 1.4rem;
+  color: #2563eb;
+  margin-left: 0.2rem;
+}
+
+/* COMBINATORS */
+/* Direct child combinator (>): only paragraphs that are direct children of .parent */
+.parent > p {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+/* Descendant combinator (space): any paragraph inside .inner, at any depth */
+.inner p {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Adjacent sibling combinator (+): the paragraph immediately after an h3 */
+.combinator-demo h3 + p {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* General sibling combinator (~): any paragraph sibling after the h3, not just the first */
+.combinator-demo h3 ~ p:last-child {
+  color: #7c3aed;
+}

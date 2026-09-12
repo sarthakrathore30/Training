@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Height and Width Practice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Height &amp; Width Practice</h1>
+  </header>
+
+  <main class="size-wrapper">
+    <div class="size-box box-px">
+      <h2>Pixel Box</h2>
+      <p>width: 200px; height: 150px;</p>
+    </div>
+
+    <div class="size-box box-percent">
+      <h2>Percent &amp; Viewport Box</h2>
+      <p>
+        This box uses width: 50%, max-width: 260px and min-height: 40vh
+        to demonstrate percentage and viewport-based sizing together.
+      </p>
+    </div>
+
+    <div class="size-box box-em">
+      <h2>Em Box with Overflow</h2>
+      <p>
+        This box is sized in em units (width: 15em) and has overflow: auto
+        applied. The content inside is long enough to exceed the box's
+        max-height, so a scrollbar appears instead of the box growing
+        endlessly — a common technique for keeping card layouts tidy.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CSS Practice Pages</p>
+  </footer>
+</body>
+</html>

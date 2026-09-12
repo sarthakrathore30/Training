@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced CSS Selectors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Advanced CSS Selectors</h1>
+  </header>
+
+  <main>
+    <section class="selector-demo">
+      <h2>Attribute Selectors</h2>
+      <form>
+        <input type="text" placeholder="Styled via [type='text']">
+        <br>
+        <a href="https://example.com">Secure link (https)</a>
+      </form>
+    </section>
+
+    <section class="selector-demo">
+      <h2>Pseudo-classes &amp; Pseudo-elements</h2>
+      <ul class="fruit-list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Date</li>
+        <li>Elderberry</li>
+      </ul>
+      <p class="quote">This paragraph uses ::before and ::after.</p>
+    </section>
+
+    <section class="selector-demo combinator-demo">
+      <h2>Combinators</h2>
+      <div class="parent">
+        <p>Direct child of .parent (targeted with &gt;)</p>
+        <div class="inner">
+          <p>Descendant paragraph, not a direct child</p>
+        </div>
+      </div>
+      <h3>Adjacent Sibling</h3>
+      <p>This paragraph is immediately after the heading (targeted with +).</p>
+      <p>This paragraph is a general sibling further down (targeted with ~).</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Selector Practice</p>
+  </footer>
+</body>
+</html>
