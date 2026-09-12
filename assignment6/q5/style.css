@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.8s ease both;
+}
+
+.pricing-card:nth-child(1) { animation-delay: 0.1s; }
+.pricing-card:nth-child(2) { animation-delay: 0.3s; }
+.pricing-card:nth-child(3) { animation-delay: 0.5s; }
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card.featured {
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: scale(1.08);
+  padding: 2.5rem 2rem;
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.08) translateY(-10px);
+}
+
+.pricing-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card ul li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.pricing-card button {
+  background-color: #1e293b;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pricing-card.featured button {
+  background-color: #ffffff;
+  color: #2563eb;
+}
+
+.pricing-card button:hover {
+  opacity: 0.85;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 750px) {
+  .pricing-section {
+    flex-direction: column;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-10px);
+  }
+}
