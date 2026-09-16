@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Practice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice</h1>
+  </header>
+
+  <main>
+    <section class="selector-block">
+      <h2>Element &amp; Class Selectors</h2>
+      <p>This is a plain paragraph styled by the element selector.</p>
+      <p class="highlight">This paragraph has a class and is styled differently.</p>
+    </section>
+
+    <section class="selector-block">
+      <h2>ID Selector</h2>
+      <p id="special-note">This paragraph is styled using a unique ID selector.</p>
+    </section>
+
+    <section class="selector-block">
+      <h2>Attribute Selector</h2>
+      <a href="https://example.com">A secure link (https)</a>
+      <br>
+      <input type="text" placeholder="Styled via [type='text']">
+    </section>
+
+    <section class="selector-block combinator-block">
+      <h2>Combinators</h2>
+      <div class="parent">
+        <p>Direct child of .parent (&gt;)</p>
+        <div class="nested">
+          <p>Descendant paragraph, several levels deep</p>
+        </div>
+      </div>
+      <h3>Sibling Heading</h3>
+      <p>Immediately after the heading (+)</p>
+      <p>A later sibling paragraph (~)</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Selectors Practice</p>
+  </footer>
+</body>
+</html>

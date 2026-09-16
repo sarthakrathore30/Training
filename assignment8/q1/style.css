@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* Flexbox aligns all four examples in one row, wrapping on small screens */
+.demo-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+}
+
+.demo-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.demo-item p {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* :hover — changes color on mouse-over */
+.hover-link {
+  display: inline-block;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.hover-link:hover {
+  color: #f97316;
+}
+
+/* :focus — highlights border when the input is active */
+.focus-input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.focus-input:focus {
+  border-color: #2563eb;
+}
+
+/* :active — changes appearance while the button is being pressed */
+.active-btn {
+  padding: 0.7rem 1.4rem;
+  background-color: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.active-btn:active {
+  transform: scale(0.92);
+  background-color: #15803d;
+}
+
+/* :nth-child(even) — shades alternating list items */
+.nth-list {
+  list-style: none;
+  text-align: left;
+}
+.nth-list li {
+  padding: 0.5rem 0.7rem;
+  border-radius: 4px;
+  margin-bottom: 0.3rem;
+}
+.nth-list li:nth-child(even) {
+  background-color: #dbeafe;
+}
+.nth-list li:nth-child(odd) {
+  background-color: #f1f5f9;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box-Sizing Comparison</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Box-Sizing Comparison</h1>
+  </header>
+
+  <main class="compare-wrapper">
+    <div class="compare-item">
+      <h2>content-box (default)</h2>
+      <div class="box content-box-demo">width: 250px; padding: 30px;</div>
+      <p>Total rendered width is 250px + padding + border, so this box appears wider than 250px.</p>
+    </div>
+
+    <div class="compare-item">
+      <h2>box-sizing: border-box</h2>
+      <div class="box border-box-demo">width: 250px; padding: 30px;</div>
+      <p>Padding and border are included within 250px, so the box stays exactly that width.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Box-Sizing Practice</p>
+  </footer>
+</body>
+</html>

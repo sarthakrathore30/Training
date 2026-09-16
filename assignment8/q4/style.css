@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.selector-block {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.selector-block h2 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+/* ELEMENT SELECTOR: targets every <p> by tag name */
+p {
+  margin-bottom: 0.8rem;
+  color: #334155;
+}
+
+/* CLASS SELECTOR: targets any element with class="highlight" */
+.highlight {
+  background-color: #fde68a;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #713f12;
+}
+
+/* ID SELECTOR: targets the single unique element with id="special-note" */
+#special-note {
+  color: #b91c1c;
+  font-style: italic;
+  border-left: 4px solid #b91c1c;
+  padding-left: 0.8rem;
+}
+
+/* ATTRIBUTE SELECTORS */
+a[href^="https"] {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  margin-top: 0.6rem;
+  padding: 0.6rem;
+  border: 2px solid #94a3b8;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* COMBINATORS */
+/* Direct child combinator: only <p> elements that are direct children of .parent */
+.parent > p {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Descendant combinator: any <p> nested anywhere inside .nested */
+.nested p {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Adjacent sibling combinator: the <p> immediately following an <h3> */
+.combinator-block h3 + p {
+  color: #9333ea;
+  font-weight: 600;
+}
+
+/* General sibling combinator: the last <p> sibling following the <h3> */
+.combinator-block h3 ~ p:last-child {
+  color: #ea580c;
+}

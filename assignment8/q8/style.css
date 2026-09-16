@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* Flexbox centers both comparison boxes on the page */
+.compare-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+}
+
+.compare-item {
+  max-width: 300px;
+  text-align: center;
+}
+
+.compare-item h2 {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.compare-item p {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Shared box styling: same declared width and padding for a fair comparison */
+.box {
+  width: 250px;
+  padding: 30px;
+  border: 5px solid;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 0 auto;
+}
+
+/* Default box-sizing: content-box — width applies only to content,
+   so padding and border are added on top, making it visually larger */
+.content-box-demo {
+  box-sizing: content-box;
+  background-color: #ef4444;
+  border-color: #b91c1c;
+}
+
+/* box-sizing: border-box — padding and border are included in the 250px,
+   so the box stays exactly 250px wide */
+.border-box-demo {
+  box-sizing: border-box;
+  background-color: #16a34a;
+  border-color: #14532d;
+}
+
+@media (max-width: 600px) {
+  .box {
+    width: 90%;
+    max-width: 250px;
+  }
+}
