@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Grid defines header, sidebar, and main content areas */
+.dashboard {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.dash-header {
+  grid-area: header;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 1.2rem 2rem;
+}
+
+.dash-sidebar {
+  grid-area: sidebar;
+  background-color: #1e293b;
+  padding: 1.5rem 1rem;
+}
+
+.dash-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dash-sidebar nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.dash-sidebar nav a:hover {
+  color: #38bdf8;
+}
+
+/* Grid arranges the four summary cards */
+.dash-main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  padding: 1.5rem;
+  align-content: start;
+}
+
+.dash-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: loadIn 0.6s ease both; /* simple load animation */
+}
+
+.dash-card:nth-child(1) { animation-delay: 0.1s; }
+.dash-card:nth-child(2) { animation-delay: 0.25s; }
+.dash-card:nth-child(3) { animation-delay: 0.4s; }
+.dash-card:nth-child(4) { animation-delay: 0.55s; }
+
+/* Scale up with a shadow effect on hover */
+.dash-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.dash-card h2 {
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.dash-card p {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+@keyframes loadIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Below 750px, sidebar shifts to the top and content stacks below it */
+@media (max-width: 750px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main";
+  }
+
+  .dash-sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dash-main {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header: logo left, nav links right */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* Three feature boxes arranged horizontally */
+.feature-row {
+  flex: 1;
+  display: flex;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.feature-box {
+  flex: 1;
+  max-width: 320px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease; /* smooth hover scale */
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+}
+
+.feature-box h2 {
+  margin-bottom: 0.8rem;
+  color: #0f172a;
+}
+
+/* Footer centered at the bottom */
+.site-footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #1e293b;
+  color: #d1d5db;
+}
+
+/* Below 750px, feature boxes stack vertically */
+@media (max-width: 750px) {
+  .feature-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

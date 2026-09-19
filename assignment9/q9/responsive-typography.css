@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typography-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* Heading scales fluidly between 1.5rem and 3rem based on viewport width */
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+/* Paragraph scales fluidly between 1rem and 1.5rem based on viewport width */
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* Below 700px, tighten line-height and spacing for smaller screens */
+@media (max-width: 700px) {
+  .typography-section {
+    padding: 2rem 1.2rem;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}

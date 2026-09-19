@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* Flexbox row of cards; wraps so media queries can control column count */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease;
+  /* Desktop default: 4 equal columns */
+  flex: 1 1 calc(25% - 1.5rem);
+}
+
+.card:hover {
+  background-color: #dbeafe;
+}
+
+.card h2 {
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+}
+
+/* Tablet breakpoint: 2 columns */
+@media (max-width: 900px) {
+  .card {
+    flex: 1 1 calc(50% - 1.5rem);
+  }
+}
+
+/* Mobile breakpoint: 1 column */
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}

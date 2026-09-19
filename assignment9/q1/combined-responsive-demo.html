@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combined Responsive Web Demo</title>
+<link rel="stylesheet" href="combined-responsive-demo.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">ResponsiveHub</div>
+    <nav class="nav-links">
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#cheatsheet">Cheat Sheet</a>
+    </nav>
+  </header>
+
+  <main class="content-grid">
+    <section class="gallery-section fade-in" id="gallery">
+      <h2>Image Gallery</h2>
+      <div class="mini-gallery">
+        <div class="mini-photo" style="background-color:#f87171;"></div>
+        <div class="mini-photo" style="background-color:#38bdf8;"></div>
+        <div class="mini-photo" style="background-color:#4ade80;"></div>
+      </div>
+    </section>
+
+    <section class="text-section fade-in" id="about">
+      <h2>What is Responsive Design?</h2>
+      <p>
+        Responsive design means building pages that adapt gracefully to
+        any screen size using flexible layouts, relative units, and
+        media queries, so the experience stays great on phones,
+        tablets, and desktops alike.
+      </p>
+    </section>
+
+    <section class="cheatsheet-section fade-in" id="cheatsheet">
+      <h2>Cheat Sheet Preview</h2>
+      <ul>
+        <li>Flexbox for one-dimensional layouts</li>
+        <li>Grid for two-dimensional layouts</li>
+        <li>clamp() for fluid typography</li>
+        <li>Media queries for breakpoints</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Contact: hello@responsivehub.com | &copy; 2026 ResponsiveHub</p>
+  </footer>
+</body>
+</html>

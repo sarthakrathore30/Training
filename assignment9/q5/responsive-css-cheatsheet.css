@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* Grid layout: 3 columns on large screens, auto-fitting down to fewer */
+.cheat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cheat-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cheat-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cheat-box h2 {
+  margin-bottom: 0.6rem;
+  color: #2563eb;
+  font-size: 1.05rem;
+}
+
+.cheat-box p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Below 700px, each box becomes a stacked "key: value" row */
+@media (max-width: 700px) {
+  .cheat-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .cheat-box {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 1rem;
+  }
+
+  .cheat-box h2 {
+    margin-bottom: 0;
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
+
+  .cheat-box p {
+    margin: 0;
+  }
+}

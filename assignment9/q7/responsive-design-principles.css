@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* Grid displays the three principle boxes */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.principle-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.6rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.principle-box h2 {
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+  transition: color 0.4s ease;
+}
+
+.principle-box p {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  color: #475569;
+  transition: color 0.4s ease;
+}
+
+.principle-box code {
+  display: block;
+  background-color: #f1f5f9;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-family: "Courier New", monospace;
+  transition: background-color 0.4s ease;
+}
+
+/* On hover: apply a background gradient and change text color */
+.principle-box:hover {
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+}
+
+.principle-box:hover h2,
+.principle-box:hover p {
+  color: #ffffff;
+}
+
+.principle-box:hover code {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Below 600px, convert to a single column */
+@media (max-width: 600px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
