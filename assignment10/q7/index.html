@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+  <!-- Header with pending-task badge counter -->
+  <header class="bg-dark text-white text-center py-4">
+    <h1 class="mb-2">My Tasks</h1>
+    <span class="badge bg-danger fs-6">3 Pending</span>
+  </header>
+
+  <main class="container my-5">
+    <ul class="list-group shadow-sm">
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Finish quarterly report
+        <span class="badge bg-danger rounded-pill">High</span>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Reply to client emails
+        <span class="badge bg-warning text-dark rounded-pill">Medium</span>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Water the office plants
+        <span class="badge bg-success rounded-pill">Low</span>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center text-decoration-line-through text-muted">
+        Update project roadmap
+        <span class="badge bg-secondary rounded-pill">Done</span>
+      </li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-outline-success">
+        Completed <span class="badge bg-success ms-1">1</span>
+      </button>
+    </div>
+  </main>
+
+  <footer class="text-center text-muted py-3">
+    <p class="mb-0">&copy; 2026 Task Tracker App</p>
+  </footer>
+
+</body>
+</html>

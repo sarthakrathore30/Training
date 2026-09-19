@@ -1,0 +1,13 @@
+/* Minor typography and image polish */
+body {
+  font-family: 'Georgia', serif;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}

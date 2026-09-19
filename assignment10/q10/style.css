@@ -1,0 +1,11 @@
+/* Carousel image sizing and caption styling */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 10px 20px;
+}

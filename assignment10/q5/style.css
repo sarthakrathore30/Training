@@ -1,0 +1,32 @@
+/* Override Bootstrap CSS variables for a custom theme */
+:root {
+  --bs-primary: #e07a5f;
+  --bs-font-sans-serif: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: #fdf6f0;
+}
+
+header, footer {
+  background-color: var(--bs-primary);
+}
+
+.card-title {
+  font-weight: 600;
+  color: #3d405b;
+}
+
+/* Custom themed button using the overridden primary color */
+.btn-theme {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
+
+.btn-theme:hover {
+  background-color: #c65f45;
+  border-color: #c65f45;
+  color: #fff;
+}

@@ -1,0 +1,8 @@
+/* Small visual refinements for the dashboard */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.alert {
+  border-left: 5px solid rgba(0,0,0,0.15);
+}

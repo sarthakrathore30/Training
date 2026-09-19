@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Piazza — Today's Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="text-center py-5 bg-dark text-white">
+    <h1 class="fw-bold">La Piazza</h1>
+    <p class="lead mb-0">Authentic Italian, made fresh daily</p>
+  </header>
+
+  <main class="container my-5">
+
+    <h2 class="text-center lead fw-bold mb-4">Today's Menu</h2>
+
+    <!-- Bootstrap table for menu items -->
+    <div class="table-responsive mb-5">
+      <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Item</th>
+            <th>Category</th>
+            <th class="text-end">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Margherita Pizza</td>
+            <td>Main Course</td>
+            <td class="text-end">$12.50</td>
+          </tr>
+          <tr>
+            <td>Fettuccine Alfredo</td>
+            <td>Pasta</td>
+            <td class="text-end">$14.00</td>
+          </tr>
+          <tr>
+            <td>Caprese Salad</td>
+            <td>Starter</td>
+            <td class="text-end">$8.00</td>
+          </tr>
+          <tr>
+            <td>Tiramisu</td>
+            <td>Dessert</td>
+            <td class="text-end">$6.50</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row g-4">
+      <!-- Chef's specials list group -->
+      <div class="col-12 col-md-6">
+        <h3 class="text-center mb-3">Chef's Specials</h3>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Truffle Risotto
+            <span class="badge bg-warning text-dark">New</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Grilled Sea Bass
+            <span class="badge bg-success">Chef's Pick</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Osso Buco
+            <span class="badge bg-danger">Limited</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Featured image with caption -->
+      <div class="col-12 col-md-6 text-center">
+        <figure>
+          <img src="https://placehold.co/500x350/8B4513/ffffff?text=Chef%27s+Special" class="img-fluid rounded shadow" alt="Chef's special dish plated beautifully">
+          <figcaption class="text-muted mt-2">Our signature Osso Buco, slow-cooked for 6 hours.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 La Piazza Ristorante</p>
+  </footer>
+
+</body>
+</html>

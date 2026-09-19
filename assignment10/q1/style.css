@@ -1,0 +1,20 @@
+/* Custom styling layered on top of Bootstrap */
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Hero section: full-width gradient background, min-height for visual impact */
+.hero-section {
+  min-height: 70vh;
+  background: linear-gradient(135deg, #1f4287, #278ea5);
+}
+
+/* Slight hover lift on feature boxes for polish */
+.border.rounded {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.border.rounded:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}

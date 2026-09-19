@@ -1,0 +1,17 @@
+/* Extra polish on top of Bootstrap utilities */
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Give the profile picture a fixed, consistent size */
+header img.rounded-circle {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Soft shadow lift for cards on hover */
+.shadow-sm:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+}
